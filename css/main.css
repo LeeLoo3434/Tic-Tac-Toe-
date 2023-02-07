@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #333, #000);
+}
+
+h1 {
+    color: red;
+    animation: border-animation 5s linear infinite;
+    }
+    
+    @keyframes border-animation {
+    0% {
+    color: red;
+    }
+    25% {
+    color: blue;
+    }
+    50% {
+    color: green;
+    }
+    75% {
+    color: yellow;
+    }
+    100% {
+    color: red;
+    }
+    }
+
+h1, h2, button {
+    margin-top: 20px;
+}
+h2 {
+    color: red;
+    animation: border-animation 5s linear infinite;
+}
+#board {
+    height: 500px;
+    width: 500px;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    border: 10px solid red;
+    animation: border-animation 5s linear infinite;
+    }
+    
+    #board > div {
+    font-weight: bold;
+    font-size: 24px;
+    height: 160px;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border-width: 10px;
+    border-style: solid;
+    border-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet) 1;
+    animation: rotate-border-color 2s ease-in-out infinite;
+    }
+
+@keyframes rotate-border-color {
+    0% {
+        border-image-source: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    }
+    20% {
+        border-image-source: linear-gradient(to right, orange, yellow, green, blue, indigo, violet, red);
+    }
+    40% {
+        border-image-source: linear-gradient(to right, yellow, green, blue, indigo, violet, red, orange);
+    }
+    60% {
+        border-image-source: linear-gradient(to right, green, blue, indigo, violet, red, orange, yellow);
+    }
+    80% {
+        border-image-source: linear-gradient(to right, blue, indigo, violet, red, orange, yellow, green);
+    }
+    100% {
+        border-image-source: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    }
+}
+
+
+
+
+button {
+    margin-top: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-weight: bold;
+    text-align: center;
+    }
+
